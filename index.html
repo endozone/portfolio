@@ -134,6 +134,36 @@
 
   .nav-link:hover { color: var(--ink); }
 
+  .project-list {
+    margin-top: 28px;
+    display: grid;
+    gap: 16px;
+  }
+
+  .project-card {
+    padding: 14px 0 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .project-card:last-child {
+    border-bottom: none;
+  }
+
+  .project-card h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .project-card p {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    margin-bottom: 0;
+  }
+
   .divider {
     height: 0px;
     background: var(--rule);
@@ -342,6 +372,16 @@
         <ul class="nav-list">
           <li onclick="loadPiece('research-1', this)">Ryanair</li>
 
+        </ul>
+      </div>
+
+      <div class="nav-group" id="group-projects">
+        <button class="nav-heading" onclick="toggleGroup('projects')">
+          <span>Projects</span>
+          <span class="chev">&rsaquo;</span>
+        </button>
+        <ul class="nav-list">
+          <li onclick="loadPiece('projects', this)">One-off projects and builds</li>
         </ul>
       </div>
 
@@ -676,6 +716,20 @@
     <li id="fn12">Polanyi, <i>The Great Transformation</i>, 46. <a href="#ref12" class="footnote-backref">↩</a></li>
     <li id="fn13">Ibid. <a href="#ref13" class="footnote-backref">↩</a></li>
   </ol>
+</div>
+`
+      },
+      'projects': {
+        eyebrow: "",
+        title: 'Projects',
+        meta: "",
+        body: `
+<p>A selection of things I made in my own time: little websites, experiments, or one-off builds that were more about curiosity than client work.</p>
+<div class="project-list">
+  <div class="project-card">
+    <h3><a href="https://endozone.github.io/lindyindex/">The Lindy Index</a></h3>
+    <p>An interactive site that explores the Lindy heuristic - the idea that the longer something has been around, the more likely it is to continue - as it applies to publicly-traded companies. Benchmark the basket against the S&P 500, or compare up to three different companies across various industries.</p>
+  </div>
 </div>
 `
       },
