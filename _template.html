@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TODO: change the title (this shows in the browser tab) -->
+<title>New piece title — mia chin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link href="assets/style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="layout">
+    <!-- The sidebar fills itself in — leave it empty. -->
+    <aside class="sidebar"></aside>
+    <main class="main">
+      <div class="content">
+        <!-- The little uppercase line above the title, e.g. "Essay · March 2027" -->
+        <div class="eyebrow">Essay · Month Year</div>
+        <!-- The big title of the piece -->
+        <h1>New piece title</h1>
+        <!-- The reading-time / meta line under the title -->
+        <div class="meta">10 min read</div>
+<!-- ==== PIECE BODY START ==== -->
+
+        <p>Write your piece here. Each paragraph goes in its own &lt;p&gt;...&lt;/p&gt;.</p>
+
+        <p>Useful building blocks (copy as needed):</p>
+
+        <!-- A section subheading -->
+        <h3>A subheading</h3>
+
+        <!-- An image / chart with an optional caption. Put the image file in
+             images/ or charts/ and point src at it. -->
+        <figure>
+          <img src="images/your-image.jpg" alt="Describe the image for screen readers.">
+          <figcaption>An optional caption.</figcaption>
+        </figure>
+
+        <!-- A smaller, centered chart: use class="chart-small" -->
+        <figure class="chart-small">
+          <img src="charts/your-chart.png" alt="Describe the chart.">
+        </figure>
+
+        <!-- A pull quote -->
+        <blockquote><p>"A quotation."</p></blockquote>
+
+        <!-- A footnote reference in the text looks like this: -->
+        <p>Some claim that needs a source.<a href="#fn1" id="ref1" class="footnote-ref">1</a></p>
+
+        <!-- ...and the matching footnotes go at the very bottom: -->
+        <div class="footnotes">
+          <ol>
+            <li id="fn1">Author, "Source Title," Publication, Year. <a href="#ref1" class="footnote-backref">↩</a></li>
+          </ol>
+        </div>
+
+<!-- ==== PIECE BODY END ==== -->
+      </div>
+    </main>
+  </div>
+  <script src="assets/pieces.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
