@@ -58,7 +58,6 @@ window.PIECES = [
     section: 'research',
     navTitle: 'TransDigm',
     file: 'research-transdigm.html',
-    featured: { title: 'Too Close to the Sun? TransDigm’s Takeover of the Aerospace Parts Market', tag: 'Equity research (brief) · 5 min read' }
   },
   {
     section: 'projects',
