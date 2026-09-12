@@ -23,6 +23,11 @@
 window.PIECES = [
   {
     section: 'essays',
+    navTitle: 'The Decomposition Fallacy',
+    file: 'essay-decomposition-fallacy.html'
+  },
+  {
+    section: 'essays',
     navTitle: 'The Report on the Fur Trade Accounts, 1879',
     file: 'essay-fur-trade.html',
     featured: { title: 'The Report on the Fur Trade Accounts, 1879', tag: 'Essay · 13 min read' }
@@ -31,11 +36,6 @@ window.PIECES = [
     section: 'essays',
     navTitle: 'Business cycles and rational expectations',
     file: 'essay-business-cycles.html'
-  },
-  {
-    section: 'essays',
-    navTitle: 'The financial instability hypothesis',
-    file: 'essay-financial-instability.html'
   },
   {
     section: 'essays',
