@@ -23,11 +23,6 @@
 window.PIECES = [
   {
     section: 'essays',
-    navTitle: 'The Decomposition Fallacy',
-    file: 'essay-decomposition-fallacy.html'
-  },
-  {
-    section: 'essays',
     navTitle: 'The Report on the Fur Trade Accounts, 1879',
     file: 'essay-fur-trade.html',
     featured: { title: 'The Report on the Fur Trade Accounts, 1879', tag: 'Essay · 13 min read' }
@@ -45,6 +40,12 @@ window.PIECES = [
   },
   {
     section: 'research',
+    navTitle: 'Buying Relationships?',
+    file: 'research-buying-relationships.html',
+    featured: { title: 'Buying Relationships? What going public means for AI labs', tag: 'Research (thematic)· 14 min read' }
+  },
+  {
+    section: 'research',
     navTitle: 'Ryanair',
     file: 'research-ryanair.html'
   },
@@ -58,11 +59,6 @@ window.PIECES = [
     section: 'research',
     navTitle: 'TransDigm',
     file: 'research-transdigm.html',
-  },
-  {
-    section: 'research',
-    navTitle: 'Buying Relationships?',
-    file: 'research-buying-relationships.html'
   },
   {
     section: 'projects',
