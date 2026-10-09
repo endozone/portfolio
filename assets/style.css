@@ -291,6 +291,19 @@ body {
   max-width: 80%;
 }
 
+/* Embedded PDF viewer */
+.content figure.pdf-embed iframe {
+  display: block;
+  width: 100%;
+  height: 85vh;
+  min-height: 520px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.content figure.pdf-embed figcaption a { color: var(--accent); }
+
 .featured {
   margin-top: 56px;
   padding-top: 32px;

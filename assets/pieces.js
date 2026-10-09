@@ -60,6 +60,11 @@ window.PIECES = [
     file: 'research-transdigm.html',
   },
   {
+    section: 'research',
+    navTitle: 'Buying Relationships?',
+    file: 'research-buying-relationships.html'
+  },
+  {
     section: 'projects',
     navTitle: 'One-off projects and builds',
     file: 'projects.html'
