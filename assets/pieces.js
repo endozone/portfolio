@@ -53,7 +53,7 @@ window.PIECES = [
     section: 'research',
     navTitle: 'Texas Pacific Land Company',
     file: 'research-texas-pacific-land.html',
-    featured: { title: 'Basin & Change: A Brief Look Into the Texas Pacific Land Company', tag: 'Equity research (brief) · 8 min read' }
+    featured: { title: 'Basin & Change: A brief look into the Texas Pacific Land Company', tag: 'Equity research (brief) · 8 min read' }
   },
   {
     section: 'research',
