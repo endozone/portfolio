@@ -18,11 +18,200 @@
         <h1>Buying Relationships?</h1>
         <div class="meta">14 min read</div>
 <!-- ==== PIECE BODY START ==== -->
-<figure class="pdf-embed">
-  <iframe src="pdfs/buying-relationships.pdf#view=FitH" title="Buying Relationships? (PDF)" loading="lazy"></iframe>
-  <figcaption>Can't see the document? <a href="pdfs/buying-relationships.pdf" target="_blank" rel="noopener">Open the PDF in a new tab</a>.</figcaption>
-</figure>
+<p class="lede">Anthropic and OpenAI are preparing to go public, and public markets reward predictable enterprise revenue. Winning that revenue depends on relationships the labs do not yet have: procurement approvals, implementation expertise, access to customer data, and a reputation for safety. So far, the labs are not acquiring the software companies that hold these relationships. Instead, they are renting implementation expertise, building their own procurement channels, and licensing access to data. This suggests that the popular claim “relationships matter more than ever” is only partly true. It holds for vendors that own customer data or a strong record of trust, but it is weaker for vendors whose advantage was their position in the customer’s buying process, because the labs are absorbing that position themselves.</p>
 
+<p class="disclaimer"><i>This piece is exploratory research, not investment advice.</i></p>
+
+<h2>Section 1: What does an IPO do to a research lab?</h2>
+
+<p>Anthropic and OpenAI are both preparing to go public, Anthropic in late 2026 and OpenAI in 2027. Bloomberg reports that Anthropic could begin marketing its IPO the week of November 9 and raise roughly $100 billion at a valuation near $2 trillion, with shares trading before Thanksgiving (<a href="https://parameter.io/claude-creator-prepares-100-billion-public-offering-ahead-of-thanksgiving">Parameter</a>). OpenAI’s timeline is longer. Its CFO told employees in August that the company will go public in 2027, or sooner if the business continues to accelerate (<a href="https://www.ventureatlas.org/company/openai">Venture Atlas</a>).</p>
+
+<p>Most of the coverage around this event has focused on the offerings themselves, but the more consequential question is what changes afterward. A private lab is judged mainly on the quality of its models and the growth of its usage; a public company is judged on the predictability of its revenue (issues guidance, quarterly and yearly reports, etc.) and is measured against analyst expectations.</p>
+
+<p>For an AI lab, the most dependable revenue comes from enterprise contracts, which run for multiple years and tend to expand over time. Winning and keeping those contracts requires procurement approvals, enterprise sales teams, and implementation partners. These are relationships the labs do not yet have at scale. They can, however, be built or rented, and how the labs choose to obtain them says a great deal about where value in enterprise software will settle.</p>
+
+<h3 class="subhead">Enterprise demand is broad but shallow</h3>
+
+<p>Recent data from Ramp’s Economics Lab, which tracks spending across more than 70,000 US businesses, suggests that growing enterprise revenue will be more difficult than headline adoption numbers imply. This is to say (<a href="https://ramp.com/data/ai-index-sept-2026">Ramp AI Index, September 2026</a>):</p>
+
+<ol class="numbered">
+  <li><strong>Adoption is still growing, but more slowly:</strong> In August, 43.8% of businesses on Ramp’s platform paid Anthropic, up 0.34 percentage points from July. OpenAI rose 0.09 points, to 39.8%.</li>
+  <li><strong>The heaviest users spent less:</strong> Monthly AI spending per employee at the top 1% of firms fell 9.7%, from $7,976 to $7,205. Ramp’s lead economist, Ara Kharazian, notes that August vacations may explain part of the decline, so the next monthly report will be important.</li>
+  <li><strong>Prices are falling faster than usage is rising:</strong> Ramp’s measure of the effective price per million tokens fell 41%, from a March peak of $1.15 to $0.68.</li>
+  <li><strong>Buyers are settling for “good enough”:</strong> Frontier models’ share of tokens used fell to 45% from a peak of 53%, and some companies now default to cheaper standard models.</li>
+</ol>
+
+<p>Ramp’s sample leans toward technology companies, so more traditional enterprises are likely earlier in their adoption than these figures suggest. Taken together, the data describes a market in which models compete on price and buyers are increasingly satisfied with cheaper options. In that environment, the labs’ next dollar of revenue is more likely to come from deeper deployments inside existing enterprise customers than from signing up new ones. As a result, deeper deployment will depend less on model quality and more on relationships.</p>
+
+<aside class="callout">
+  <p>Lab revenue is also highly concentrated, which makes the pullback among heavy users more significant. Ramp’s data shows that the top 1% of customers account for 80% of enterprise revenue at both OpenAI and Anthropic, and Kharazian has described this as a level of concentration risk he has not seen in any other software category that Ramp tracks (<a href="https://www.pymnts.com/news/artificial-intelligence/2026/openai-and-anthropic-get-80percent-of-revenue-from-1percent-of-customers/">PYMNTS</a>). Anthropic’s leaked draft prospectus shows the same pattern: two customers produced nearly a quarter of Anthropic’s 2025 revenue (<a href="https://decodethefuture.org/en/anthropic-s1-ipo-filing-explained/">Decode the Future</a>). A public company with this profile has a strong incentive to broaden its enterprise base, which is a relationship problem.</p>
+</aside>
+
+<h3 class="subhead">The labs’ first response</h3>
+
+<p>The labs began addressing this before either filed to go public. Earlier this spring, both labs independently spent billions acquiring implementation firms. Anthropic anchored a $1.5B services JV with Blackstone, Hellman &amp; Friedman, and Goldman Sachs, then acquired Fractional AI, and rebranded it to Ode. OpenAI launched a $4B deployment company backed by TPG, Advent, and Bain Capital, then acquired Tomoro, a London consultancy with about 150 forward-deployed engineers.</p>
+
+<p>What these deals have in common is that neither lab bought software. Both bought teams that already work inside enterprise customers. That suggests the labs see access to customers, rather than additional product, as their main constraint.</p>
+
+<h2>Section 2: The ‘relationship trade’</h2>
+
+<p>Enterprise software companies hold four distinct kinds of relationships with their customers. A <i>procurement relationship</i> is a vendor’s established position in the customer’s buying process: approved-vendor status, completed security and legal reviews, compliance certifications, and so on. An <i>implementation relationship</i> is the knowledge of how a particular customer actually operates, captured in its configurations, automations, and integrations, along with the people who maintain them. A <i>data relationship</i> comes from being the system of record, the authoritative store of a customer’s accounts, employees, tickets, or contracts and their history. A <i>trust relationship</i> is the buyer’s confidence that a vendor will not fail, leak data, or disappear, built over years of track record and executive relationships.</p>
+
+<p>All four of these relationships matter, but the useful question is whether a lab can access these relationships sustainably, without undertaking an acquisition.</p>
+
+<h3 class="subhead">Implementation: Gradually learned</h3>
+
+<p>The spring services deals are a way of renting implementation capacity. Implementation knowledge is unusual, however, because the party renting it also learns it; every engagement teaches the lab’s engineers how a particular bank, insurer, or retailer actually runs its operations. Over time, this reduces how much the lab needs outside partners for the same work.</p>
+
+<h3 class="subhead">Procurement: Absorbed through marketplaces</h3>
+
+<p>The clearest evidence of how the labs plan to handle procurement came in late September. Within six days of each other, Anthropic and OpenAI both launched marketplaces that let enterprise customers spend their existing AI commitments on third-party software. A company that has already signed a large contract with Anthropic can now use part of that budget to buy partner software or consulting services, including from Accenture and BCG. OpenAI launched its version with 32 partners, including Salesforce, ServiceNow, HubSpot, and CrowdStrike.</p>
+
+<p>This changes who holds the procurement relationship. When a customer buys software through its OpenAI commitment, the software vendor still gets paid, but the budget line belongs to OpenAI. Over time, the lab’s contract becomes the place where purchasing decisions are made, and individual vendors become options within it.</p>
+
+<p>There is a clear precedent for this. During the cloud transition, Amazon and Microsoft did not acquire the major software companies. Instead, they built marketplaces and committed-spend agreements that allowed customers to buy third-party software through their existing cloud contracts. The cloud providers became the billing layer that much of enterprise software now runs through. The AI labs appear to be following the same approach.</p>
+
+<h3 class="subhead">Data: Licensed, not bought</h3>
+
+<p>The labs need access to customers’ operational records to be useful, and they are licensing that access rather than buying the data outright. OpenAI’s ChatGPT for Financial Services pairs its models with licensed data from LSEG, PitchBook, and Daloopa; Anthropic made Claude the default model inside Salesforce’s Slack and Agentforce. Using the data does not move it, and the company that holds it can license access to more than one lab. As long as migrating years of records remains slow, expensive, and risky, data relationships will stay with the companies that hold them.</p>
+
+<h3 class="subhead">Trust: Where the labs are behind</h3>
+
+<p>Right now, the labs are capable of renting implementation expertise, building procurement channels, and licensing access to data, but they cannot rent a reputation for safety. Trust needs to be earned, and the labs are lagging behind due to security concerns. Ramp’s September vendor report notes an increase in companies purchasing AI security software after roughly 700 OpenAI agents escaped a testing environment and hacked Hugging Face. Kharazian also expects AI security to become a headwind to deeper enterprise adoption (<a href="https://ramp.com/data/top-saas-vendors-on-ramp-sept-2026">Ramp</a>).</p>
+
+<p>If enterprises respond to incidents like this by adding security and governance layers <i>before</i> they expand AI deployments, another layer is created, and it is one that does not involve the labs. For incumbent software vendors, this creates an opening: a company with a long record of handling sensitive data and governing access has something the labs need and cannot build quickly.</p>
+
+<div class="table-wrap">
+<table class="data-table">
+  <thead>
+    <tr><th>Relationship</th><th>What it is</th><th>How labs are getting it</th><th>Exposure</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Procurement</td><td>Position inside the customer’s buying process</td><td>Building it, through committed-spend marketplaces</td><td><i>High</i>: the budget relationship moves to the lab</td></tr>
+    <tr><td>Implementation</td><td>Knowledge of how the customer actually works</td><td>Renting it, through services ventures, consultancies, and integrators</td><td><i>High over time</i>: the lab learns it on every engagement</td></tr>
+    <tr><td>Data</td><td>Being the system of record</td><td>Licensing it, through integrations and data partnerships</td><td><i>Low</i>: the records stay with the vendor</td></tr>
+    <tr><td>Trust</td><td>Confidence in the vendor</td><td>Borrowing it, through co-branding and partnerships</td><td><i>Open</i>: the labs are currently behind</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3 class="subhead">Why labs are partnering rather than acquiring</h3>
+
+<p>Once public, the labs could use their stock to acquire enterprise software companies outright. So far, the evidence points the other way. Cash is not the main constraint, since a post-IPO acquisition would largely be paid in stock. The larger costs are: dilution on top of Anthropic’s planned $518 billion in infrastructure spending, the difficulty of integrating a large software organization into a research lab, and antitrust scrutiny for any major target.</p>
+
+<p>The most important cost is neutrality. A lab that owns a software company turns every competing vendor into a rival, while a lab that partners can work with all of them at once. Partnerships are also easier to reverse, which matters when the technology is changing quickly. Until one of the labs acquires a software product company, partnership appears to be the strategy rather than a temporary arrangement.</p>
+
+<aside class="callout">
+  <p>Not everyone agrees that procurement relationships are vulnerable. J.P. Morgan’s <a href="https://www.jpmorgan.com/content/dam/jpmorgan/documents/cb/insights/outlook/jpm-q3-2026-software-market-trends-report.pdf">2026 software sector report</a> rates traditional software companies at the top of its scale on both “distribution and ecosystem position” and “customer relationships and trust”, listing procurement relationships among the advantages AI cannot easily erode. On data and trust, this piece agrees. On procurement, the disagreement is largely about timing: J.P. Morgan’s data runs through June 2026, before either lab launched its marketplace. The marketplaces are designed to route purchasing through the lab’s contract, which is the mechanism that would weaken a vendor’s procurement position. Whether or not they succeed is one of the clearest tests of this argument.</p>
+</aside>
+
+<h2>Section 3: Case studies (Salesforce &amp; UiPath)</h2>
+
+<p>Salesforce and UiPath sit at different ends of this framework. Salesforce holds data and trust relationships, the two that are hardest for the labs to obtain. UiPath holds implementation knowledge, which is exactly what the labs’ forward-deployed engineers acquire on every engagement.</p>
+
+<div class="table-wrap">
+<table class="data-table">
+  <thead>
+    <tr><th></th><th>Salesforce (CRM)</th><th>UiPath (PATH)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Relationship held</td><td>Data (system of record for customers and sales pipeline)</td><td>Implementation (automated processes in banks, insurers, telecom companies)</td></tr>
+    <tr><td>How it charges</td><td>Per-user subscriptions, plus usage-based pricing for Agentforce</td><td>Subscriptions, moving toward transaction- and outcome-based pricing</td></tr>
+    <tr><td>Latest quarter revenue (fiscal Q2 FY27, May–July 2026)</td><td>$11.35B, +11%</td><td>$410M, +13%</td></tr>
+    <tr><td>Forward indicator</td><td>Contracted revenue for the next 12 months (cRPO): $33.5B, up 14% in constant currency</td><td>Q3 guidance implies ~7.6% growth</td></tr>
+    <tr><td>AI metric</td><td>Agentforce ARR above $1.5B, up 240%</td><td>AI pricing still being tested</td></tr>
+    <tr><td>Retention</td><td>Not disclosed</td><td>NRR 109%; gross retention 97%</td></tr>
+    <tr><td>Market cap</td><td>~$193B</td><td>~$6.9B</td></tr>
+    <tr><td>Forward P/E</td><td>~16x</td><td>~15x</td></tr>
+    <tr><td>52-week range</td><td>$146–$269</td><td>$9.20–$19.84</td></tr>
+    <tr><td>Lab relationships</td><td>Anthropic (Claudeforce, equity stake); OpenAI Marketplace partner</td><td>OpenAI collaboration. Also NVIDIA, Gemini, Snowflake integrations</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h3 class="subhead">Salesforce</h3>
+
+<p>Salesforce’s position holds up well against the labs. Its customer records cannot be absorbed by a lab; it can work with every lab at once (it is Anthropic’s partner through Claudeforce and a launch partner on OpenAI’s marketplace); and the cost of leaving sits with the customer, since migrating years of sales and service history is a project few companies are willing to take on.</p>
+
+<p>The market largely agrees. At about 16x forward earnings, Salesforce is priced as a business that will survive but not grow quickly, and its revenue growth of ~11% is the slowest in its history as a public company. The more important question is whether Salesforce, rather than a lab, captures the new spending on AI agents that run on top of its data.</p>
+
+<aside class="callout">
+  <p><strong>As an aside: how Salesforce’s business model works.</strong> Most of the company’s revenue comes from subscriptions priced per user, per month. A company pays for each sales representative or service agent who uses Sales Cloud or Service Cloud, usually under annual or multi-year contracts. Revenue grows when customers add users, buy additional products, or accept higher prices at renewal.</p>
+  <p>Agentforce is priced differently. Customers pay for the work AI agents perform rather than for the number of people using the software. They are charged per action, per conversation (for customer-facing agents), or per-user add-on. The Service Cloud and Agentforce pricing models can work against each other. If Agentforce resolves customer service cases that human agents used to handle, the customer needs fewer service agents, and therefore fewer Service Cloud seats. The better Agentforce performs, the more it can reduce the seat revenue that still makes up most of Salesforce’s business. Analysts refer to this as seat compression.</p>
+  <p>Salesforce is responding in two ways. First, it is charging for agent work directly. Agentforce work units rose 97% from the previous quarter to 3.2 billion in Q2, and half of Agentforce bookings came from customers buying more credits after using up their existing ones (<a href="https://www.cxtoday.com/ai-automation-in-cx/salesforces-outcome-based-pricing-strategic-masterstroke-or-defensive-scramble-against-ai-seat-compression/">CX Today</a>). Second, it is raising the value, and the price, of each remaining seat. On September 3, 2026, Salesforce replaced its Enterprise, Unlimited, and Agentforce 1 editions with three new tiers, Core, Advanced, and Max, which bundle Agentforce, Slack, and Tableau Next with larger allowances of agent credits. Core and Advanced cost more than the editions they replaced (<a href="https://www.concret.io/blog/salesforce-agentforce-credits-2026-update">Concret.io</a>). Existing customers keep their current pricing until they renew or buy new products (<a href="https://redresscompliance.com/salesforce-license-types-2026">Redress Compliance</a>).</p>
+</aside>
+
+<p>One thing to watch out for is the FY28 renewal cohort. Each renewal will show how three things net out: the number of seats a customer keeps, the price it pays per seat, and how much it spends on agent usage. If seat counts fall but higher seat prices and growing Agentforce usage more than make up the difference, Agentforce is adding to Salesforce’s revenue. If seat losses outpace both, Agentforce is replacing the revenue. Salesforce’s fiscal 2028, which runs from February 2027 to January 2028, will be the first full year in which a large share of customers renew under the new pricing.</p>
+
+<p>The labs’ marketplaces also create a subtle risk for Salesforce. When a customer buys Agentforce through OpenAI’s marketplace, the purchase is paid for out of that customer’s OpenAI commitment. Salesforce still records the revenue, but OpenAI holds the budget relationship. Salesforce’s data moat protects its position as the system of record, but it does not guarantee that Salesforce will remain the company the customer negotiates its AI spending with.</p>
+
+<aside class="callout">
+  <p><strong>ServiceNow</strong> follows a similar pattern with more leverage, because its workflow configurations are both data and process knowledge. It is a design partner for Anthropic and a launch partner on OpenAI’s marketplace.</p>
+</aside>
+
+<h3 class="subhead">UiPath</h3>
+
+<p>UiPath sells software “robots” that automate repetitive tasks by working through applications the way a person would: opening screens, copying fields, and entering data. Its value lies in years of process knowledge built up inside banks, insurers, and telecom companies, which is the same knowledge a lab’s forward-deployed engineers will acquire on each engagement. The threat became more concrete at OpenAI’s developer conference in September, where its Agents API added “computer use”, letting developers build agents that click, type, and navigate software (<a href="https://openai.com/index/devday-2026-recap/">OpenAI</a>). This very closely mirrors the function of UiPath’s robots.</p>
+
+<p>UiPath’s results show that implementation is being encroached on by the labs. Gross retention is 97%, so existing customers are not leaving. But new business is slowing. Net new annual recurring revenue was $37 million on a base of $1.94 billion, and the Q3 guidance implies growth will roughly halve, to about 7.6%. Existing automations are staying in place, while new automation spending appears to be going elsewhere.</p>
+
+<p>The market has noticed. The stock is down roughly a third from its late-August high, and DA Davidson downgraded it to Underperform with a $10 price target after the company’s September 22 investor day (<a href="https://finance.yahoo.com/markets/stocks/articles/uipath-shares-fall-da-davidson-191443976.html">Yahoo Finance</a>). RBC called UiPath a “show-me” story and grouped it with application software companies losing AI budgets to security, infrastructure, and data platforms (<a href="https://finance.yahoo.com/markets/stocks/articles/uipath-shares-fall-da-davidson-191443976.html">Yahoo Finance</a>). Management has also said it is still experimenting with how to price its AI agent products and expects to move toward outcome-based pricing (<a href="https://www.trefis.com/stock/path/articles/617153/should-you-buy-the-dip-in-uipath-stock/2026-09-30">Trefis</a>).</p>
+
+<p>The counterpoint is that the churn so far has been concentrated in smaller accounts; customers paying $1 million or more in ARR grew 21% from a year earlier, to 387 (<a href="https://www.investing.com/news/company-news/uipath-q2-fy2027-slides-profitability-rises-ai-drives-enterprise-deals-93CH-4888674">Investing.com</a>). Large regulated enterprises may want UiPath’s deterministic, governed automation precisely because they do not yet trust autonomous agents with sensitive processes.</p>
+
+<p>The key metric to watch is net new ARR over the next two quarters. If it stabilizes or grows, that would suggest large regulated customers value UiPath’s governed automation enough to keep expanding with it, even as AI agents improve. If it continues to shrink, that would suggest customers are directing new automation spending to AI agents instead, and that the labs are replacing the implementation knowledge UiPath has built up.</p>
+
+<h2>Section 4: What this means</h2>
+
+<p>In short, relationships are being re-routed from companies to the labs. Procurement relationships are moving toward the labs’ contracts, implementation knowledge is moving into the labs’ engineering teams, and data relationships are staying with the companies that hold them while being licensed to every lab. Trust is the one relationship moving in the opposite direction, toward vendors that can make AI safe to deploy.</p>
+
+<p>The claim that “relationships matter more than ever” is therefore true for companies that own customer data or a long record of trust, but not so much for companies whose advantage was their position in the customer’s buying process or the familiarity of their brand, because the labs are absorbing both.</p>
+
+<div class="table-wrap">
+<table class="data-table">
+  <thead>
+    <tr><th>Position</th><th>Examples</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Well-positioned</td><td>Systems of record that work with every lab (Salesforce, ServiceNow); AI security and governance vendors</td><td>They hold what the labs must license, or provide the trust the labs lack</td></tr>
+    <tr><td>Transitional</td><td>Consulting firms and systems integrators; implementation-heavy software (UiPath)</td><td>They remain valuable until the labs have learned enough to need them less</td></tr>
+    <tr><td>Exposed</td><td>Vendors whose advantage is procurement position or brand; AI-native applications that depend on a single lab’s marketplace</td><td>Their customer relationship becomes a listing within an external channel</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Section 5: Caveats, and what to watch</h2>
+
+<p>This argument no longer holds if the labs begin owning (either through building or acquiring) the relationships they have been renting thus far. Four developments would point in that direction:</p>
+
+<ol class="numbered">
+  <li><strong>A lab acquires a software product company:</strong> Every deal so far has been for services, tools, or talent. An acquisition of an established software vendor would suggest that partnerships were not enough.</li>
+  <li><strong>A lab launches its own system of record:</strong> An AI-native CRM or HR system built by a lab would suggest that data relationships can be replaced after all.</li>
+  <li><strong>The marketplaces stall:</strong> If the number of partners and the volume of purchases stay close to launch levels, the labs have not absorbed procurement, and vendors keep their budget relationships.</li>
+  <li><strong>Salesforce’s renewals hold up:</strong> If customers that adopt Agentforce renew with flat or growing seat counts, the agent layer is adding to Salesforce’s business rather than replacing it, which would weaken the case that relationships are being re-routed.</li>
+</ol>
+
+<div class="table-wrap">
+<table class="data-table">
+  <thead>
+    <tr><th>Timing</th><th>Event</th><th>What to look for</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Mid-October 2026</td><td>Ramp AI Index (September data)</td><td>Whether the August decline in spending among heavy users was seasonal</td></tr>
+    <tr><td>Mid to late October 2026</td><td>Anthropic’s public S-1, due at least 15 days before the roadshow</td><td>Share of revenue from enterprise customers, customer concentration, any discussion of the marketplace, and plans for acquisitions</td></tr>
+    <tr><td>Week of November 9, 2026</td><td>Anthropic’s IPO roadshow</td><td>How management presents enterprise growth to investors</td></tr>
+    <tr><td>Before November 26, 2026</td><td>Anthropic prices its shares and begins trading</td><td>The value of the stock it could use for acquisitions</td></tr>
+    <tr><td>Late November to early December 2026</td><td>Salesforce fiscal Q3 FY27 results</td><td>Agentforce revenue, contracted revenue, and any comments on seat counts</td></tr>
+    <tr><td>Early December 2026</td><td>UiPath fiscal Q3 FY27 results, guided at $440–445M</td><td>Net new annual recurring revenue and progress on AI pricing</td></tr>
+    <tr><td>Ongoing</td><td>Partner counts on both marketplaces (OpenAI launched with 32)</td><td>Whether the labs’ procurement channels are growing</td></tr>
+    <tr><td>2027</td><td>OpenAI IPO</td><td>Whether its prospectus describes a similar strategy</td></tr>
+    <tr><td>Around May 2027</td><td>Anthropic lock-up expiry, about 180 days after listing</td><td>The first realistic window for acquisitions paid in stock</td></tr>
+    <tr><td>February 2027 to January 2028</td><td>Salesforce’s fiscal 2028 renewals</td><td>Seat counts among customers that adopted Agentforce</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p class="pdf-link">Prefer the original layout? <a href="pdfs/buying-relationships.pdf" target="_blank" rel="noopener">Download the PDF</a>.</p>
 <!-- ==== PIECE BODY END ==== -->
       </div>
     </main>

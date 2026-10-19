@@ -359,3 +359,114 @@ body {
   .main { padding: 48px 28px; }
   .content h1 { font-size: 32px; }
 }
+
+/* Long-form research pieces: section heads, callouts, data tables */
+.content h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 56px 0 20px;
+}
+
+.content h3.subhead {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 21px;
+  color: var(--ink-muted);
+  margin: 36px 0 12px;
+}
+
+.content p.lede { font-size: 19px; }
+
+/* Subtitle under the h1, and a rule between essay sections */
+.content p.dek {
+  font-size: 21px;
+  line-height: 1.4;
+  color: var(--ink-muted);
+  margin: -12px 0 20px;
+}
+
+.content hr.section-break {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 40px 0;
+}
+
+.content p.disclaimer {
+  color: var(--ink-muted);
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.content ol.numbered {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.65;
+  padding-left: 24px;
+  margin-bottom: 20px;
+}
+
+.content ol.numbered li { margin-bottom: 10px; padding-left: 4px; }
+
+.content .callout {
+  margin: 32px 0;
+  padding: 20px 24px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+}
+
+.content .callout p { font-size: 16px; }
+.content .callout p:last-child { margin-bottom: 0; }
+
+.content .table-wrap {
+  margin: 32px 0 40px;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: #fff;
+}
+
+.content .data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.content .data-table th,
+.content .data-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.content .data-table th {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.content .data-table tbody tr:last-child td { border-bottom: none; }
+.content .data-table td:first-child { font-weight: 500; }
+
+.content p.pdf-link {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 800px) {
+  .content .data-table { min-width: 560px; }
+  .content h2 { font-size: 24px; }
+}
