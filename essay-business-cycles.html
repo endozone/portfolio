@@ -3,20 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Business Cycles and Rational Expectations — mia chin</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link href="assets/style.css" rel="stylesheet">
+<title>Business Cycles and Rational Expectations — Mia Chin</title>
+<link rel="preload" href="assets/fonts/cmu-serif-500-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link href="assets/latex.css" rel="stylesheet">
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar"></aside>
-    <main class="main">
-      <div class="content">
-        <div class="eyebrow">Essay · July 2025</div>
-        <h1>Business Cycles and Rational Expectations</h1>
-        <div class="meta">14 min read</div>
+<div class="page">
+  <header class="site-header">
+    <h1 class="site-title"><a href="index.html">Mia Chin</a></h1>
+    <p class="site-description">NYC-based finance and tech writer.</p>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="mailto:mchin3170@gmail.com">Email</a>
+    </nav>
+  </header>
+
+  <main class="article">
+    <h1>Business Cycles and Rational Expectations</h1>
+    <p class="article-meta">July 2025</p>
 <!-- ==== PIECE BODY START ==== -->
 <p>Hello, it's been a while. I spent April and May reading Keynes' <i>General Theory</i> for the first time. It's definitely something I'd like to come back to, but in the meantime I figured I'd spend more time familiarizing myself with the trajectory of 20th century economic thought and how these ideas came to influence what we know as macroeconomics today. What I find striking about many of these books and papers is that they stress the need to acknowledge <i>psychological</i> factors in economic analysis, which is to say that despite it being a data-heavy discipline, there is always an underlying aspect of guesswork: trying to understand how people think, how they react to political and economic changes, and how these behaviors inform the shape of said data (as well as what ought to be done with it).</p>
 <p>Robert E. Lucas Jr.'s essay, "Understanding Business Cycles", is especially salient in how it brought psychology into the late-70s macroeconomic fold. Lucas discusses 'rational expectations' as a crucial concept that economists should pay attention to, not because of a belief that current expectations rely on past experiences (as was the case at the time), but that people's expectations coincide with what is going on at any given point in a macroeconomic model; people actively adjust their behavior in the face of new economic policies, shocks, and other general 'happenings' in the market<a href="#fn1" id="ref1" class="footnote-ref">1</a>. This, and similar developments in the New Classical school of economics, had a profound effect on government policy, as it challenged the idea that aggregate demand management alone would be able to stabilize the economy in the event of a shock in the business cycle.</p>
@@ -57,7 +61,7 @@
 <p>This becomes more complicated when we factor in the idea that our agent can't actually tell if something is a relative or general price increase, at least initially. During a price increase, a good proportion of firms will end up taking the optimistic route, interpreting the change as a result of an increased demand for their good(s). This puts pressure on other firms to increase their production as well because they are all receiving the same price signals. We can take these correlated responses to result in an aggregated "co-movement" in prices, output, and investment in the wider economy<a href="#fn15" id="ref15" class="footnote-ref">15</a>. This problem of interpretation ultimately explains the business cycle, and why we see synchronized highs and lows rather than uneven expansions and contractions across industries.</p>
 
 <figure>
-  <img src="charts/consumption_output_investment.png" alt="Line chart of real GDP, consumption, and investment from 1947 to 1977, with recessionary periods shaded in grey.">
+  <img src="images/business-cycles-output-consumption-investment.png" alt="Line chart of real GDP, consumption, and investment from 1947 to 1977, with recessionary periods shaded in grey.">
   <figcaption>Working in the period that Lucas is writing in, we can see that output, consumption, and investment trend similarly, albeit on different scales. Recessionary periods are highlighted in grey. Source: FRED.</figcaption>
 </figure>
 
@@ -68,7 +72,7 @@
 <p>This has to do with the aforementioned 'signal processing problem' that our agent experienced in the section above. If it were true that inflation could be forecasted in the aggregate by using a series of short-term general price movements, one could simply rely on these forecasts to make their business decisions (e.g. if prices are only rising because of inflation, firms would not mistake this for increased demand for their products and would adjust their output, wages, etc. accordingly). The reality is, however, that the economy is judged by its past performance, and such judgements do not necessarily map on to the future (and to an extreme extent, cannot be relied upon at all to indicate its trajectory). Lucas goes on to state that if forecasts <i>were</i> always correct, "the result would be a very tight relationship between money and prices, over even very short periods, and no relationship at all between these movements and changes in real variables", which is to say that monetary changes would be able to affect prices directly without having real effects on output, investment, etc., and as a result, there wouldn't be a business cycle<a href="#fn17" id="ref17" class="footnote-ref">17</a>.</p>
 
 <figure>
-  <img src="charts/inflation_vs_expected_inflation.png" alt="Line chart comparing actual inflation to expected inflation from University of Michigan surveys, 1978 to 2024.">
+  <img src="images/business-cycles-inflation-expectations.png" alt="Line chart comparing actual inflation to expected inflation from University of Michigan surveys, 1978 to 2024.">
   <figcaption>A sample of actual vs. expected inflation using the earliest possible forecasts from the University of Michigan. The two can differ wildly, especially in the event of economic shocks (see: 2008-09), which makes it difficult to make sound assumptions about general price changes in a predictive context. Source: FRED.</figcaption>
 </figure>
 
@@ -117,10 +121,9 @@
   </ol>
 </div>
 <!-- ==== PIECE BODY END ==== -->
-      </div>
-    </main>
-  </div>
-  <script src="assets/pieces.js"></script>
-  <script src="assets/site.js"></script>
+  </main>
+
+  <footer class="site-footer">&copy; 2026 Mia Chin</footer>
+</div>
 </body>
 </html>
