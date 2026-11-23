@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HaggleBench: How Good Are LLMs at Negotiating Prices? — Mia Chin</title>
+<link rel="preload" href="assets/fonts/cmu-serif-500-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link href="assets/latex.css" rel="stylesheet">
+<style>
+  /* Booktabs-style table (move into latex.css if other pages need it) */
+  .article .table-wrap { margin: 2rem 0; overflow-x: auto; }
+  .article table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.45; }
+  .article thead tr { border-top: 1.5px solid var(--ink); border-bottom: 1px solid var(--ink); }
+  .article tbody tr:last-child { border-bottom: 1.5px solid var(--ink); }
+  .article th, .article td { text-align: left; padding: 0.4rem 0.6rem; vertical-align: top; }
+  .article th { font-weight: 700; }
+  .article .downloads { margin-top: 3.5rem; }
+  .article .downloads::before { content: ""; display: block; width: 30%; min-width: 8rem; border-top: 1px solid var(--ink); margin-bottom: 0.9rem; }
+  .article .downloads p { text-align: left; margin-bottom: 0.5rem; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="site-header">
+    <h1 class="site-title"><a href="index.html">Mia Chin</a></h1>
+    <p class="site-description">I write about economics, equities, and how markets process information.</p>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="mailto:mchin3170@gmail.com">Email</a>
+    </nav>
+  </header>
+
+  <main class="article">
+    <h1>HaggleBench: How Good Are LLMs at Negotiating Prices?</h1>
+    <p class="article-meta">November 2026</p>
+<!-- ==== PIECE BODY START ==== -->
+<p><b>HaggleBench</b> is a casual benchmark that tests frontier LLMs’ negotiation skills in a handful of scenarios. As people come to AI for advice on how to handle negotiations - and as AI agents start to negotiate for people on their behalf - it helps to get a sense of how good these models are at advocating for their financial interests.</p>
+
+<h2>Methodology</h2>
+<p>The models (GPT-6.2 Astra, Claude Opus 5.5, Grok 4.7, DeepSeek V4 Pro) played 256 games total. The benchmark has four item tiers (lamp, bike, car, and SaaS) with four scenarios each, creating 16 possible scenarios in total. In each scenario, every model played every model, including itself, as both the buyer and seller.</p>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th>Tier</th><th>Description</th><th>Base price</th><th>Social setting</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Lamp</td><td>Vintage brass desk lamp</td><td>$40</td><td>Flea market; haggling expected</td></tr>
+      <tr><td>Bike</td><td>Used road bike</td><td>$300</td><td>Craigslist meetup; casual</td></tr>
+      <tr><td>Car</td><td>2016 Honda Civic with 90k miles</td><td>$8,000</td><td>Used car lot; adversarial</td></tr>
+      <tr><td>SaaS</td><td>Annual analytics contract renewal</td><td>$50,000</td><td>Procurement call; corporate</td></tr>
+    </tbody>
+  </table>
+</div>
+<p>Each model was given a public asking price and a private walk-away price (their BATNA, or Best Alternative to a Negotiated Agreement). Ideally, buyers would not accept a price above their BATNA, and sellers would not accept a price below theirs. Some scenarios were deliberately designed as ‘no-deal’ traps where the buyer's maximum price was lower than the seller's minimum, testing a model's discipline in walking away from a bad deal.</p>
+<p>Models could choose to Offer, Accept, Walk (threaten to leave), or Leave. A non-player judge (Gemini 4 Argon) evaluated the transcripts to score honesty by cross-referencing claims against a factsheet.</p>
+
+<h2>Results</h2>
+<figure>
+  <img src="images/hagglebench-overall.png" alt="Dot plot of each model's overall share of the surplus with 95% intervals: GPT-6.2 Astra 57.7%, Claude Opus 5.5 55.0%, Grok 4.7 49.3%, DeepSeek V4 Pro 37.4%.">
+</figure>
+<p>Astra edges out Opus (within the margin of error), followed by Grok and DeepSeek. The chart above only counts feasible deals, of which Astra captured the largest surplus.</p>
+<figure>
+  <img src="images/hagglebench-by-role.png" alt="Two-panel dot plot of surplus share by role. As buyer: Astra 48.3%, Opus 43.5%, Grok 30.8%, DeepSeek 25.2%. As seller: Astra 67.1%, Opus 66.5%, Grok 67.8%, DeepSeek 49.5%.">
+</figure>
+<p>Sellers consistently captured the majority of the surplus. However, it should be noted that sellers have a behavioral advantage, as buyers often reveal their private limits to justify their offers, while sellers tend to keep their minimums hidden in order to maximize their share of value. Sellers also opened near the asking price in every tier, while buyers rarely lowballed hard enough to pull the midpoint down.</p>
+<p>Among the models, Astra leads as a buyer but is slightly edged out by Grok as the best seller by 0.7 points.</p>
+
+<h2>Emergent negotiating personalities</h2>
+<p>The benchmark revealed distinct negotiating ‘styles’ among the models:</p>
+<p><b>Astra</b> was the strongest all-around negotiator. It rarely revealed its private position and frequently used questions (e.g. “Is that a budget limit or a competing quote?”) to force the other side to reveal information without committing to anything itself. It was also the only model to ask for proof of a claim (e.g. “Show me the listing you'd buy instead”).</p>
+<p><b>Opus</b> performed similarly well but relied heavily on unverifiable claims and storytelling (e.g. “That lamp down the row is cheaper”). It was also the warmest and friendliest model, even when walking away from a deal (“I’ll pass. Thanks for being so friendly about it, and good luck with the other buyer!” compared to Astra’s “I’ll pass at $37.19. Thanks for showing it to me”).</p>
+<p><b>Grok</b> was highly bimodal. It was the strongest seller in the field, especially in the higher-value car and SaaS scenarios, but a very weak buyer. It frequently issued ultimatums and made the most walk-away threats (37), although many of these successfully drew counteroffers.</p>
+<p><b>DeepSeek</b> was the weakest negotiator because it was too transparent. It revealed its exact private limit down to the cent 54 times (compared to 8 times combined for the other three models). However, its preference for quick resolutions meant that it was able to recognize dead ends and walk away, rather than taking a subpar offer. Tied with Grok, DeepSeek was one of the only sellers that never signed a below-cost SaaS renewal.</p>
+
+<h2>Sample scenario</h2>
+<p>The conversation below is a sample of a car deal between Astra (seller) and Grok (buyer). The asking price was $10,399.17; Astra’s BATNA was $8,000.44, while Grok’s was $8,497.55. The maximum surplus was therefore $497.11. This game was excluded from the share averages.</p>
+<figure>
+  <img src="images/hagglebench-car-excerpt.png" alt="Chat excerpt from the car negotiation between Grok (buyer) and Astra (seller), which ends in a deal at $8,498.">
+  <figcaption><i>“I’m going to walk unless you can get serious”</i></figcaption>
+</figure>
+<p>Grok’s flair for the dramatic and Astra’s brief communication style are clearly shown here. What is interesting about the final negotiation is how much it haggles down to the last dollar. Considering that Grok’s private outside option was $8,497, its rejection of $8,550 was completely valid. Meanwhile, Astra's own fallback was about $8,000, so Astra essentially managed to take more than 100% of the surplus ($497.56). It is likely that Grok, while trying to round up to a whole dollar, broke its own constraint and gave an extra 45 cents to Astra.</p>
+
+<h2>Honesty vs. Profit</h2>
+<p>The most honest model was also the most profitable. Models were scored on the number of false claims they made per 100 messages (e.g. claiming a bike has ‘new tires’ when the factsheet states they were replaced last year). Astra made the fewest claims overall (about 57 per 100 messages vs. ~140 for Opus and Grok), so it had fewer chances to stretch the truth.</p>
+<figure>
+  <img src="images/hagglebench-honesty.png" alt="Scatter plot of lies about the item per 100 messages against overall surplus share: Astra at 0 lies and 57.7%, Opus at about 0.6 and 55.0%, DeepSeek at 1.0 and 37.4%, Grok at about 1.8 and 49.3%.">
+</figure>
+<p>Interestingly, models only flagged lies when it cost them money. Sellers immediately corrected buyers who exaggerated a flaw to push the price down, but buyers rarely challenged sellers who exaggerated an asset, possibly due to training that encourages models to maintain pleasant, agreeable conversations.</p>
+
+<h2>Limitations</h2>
+<ul>
+  <li>More models and games are needed to properly generalize the results</li>
+  <li>The factsheets were limited in scope, making it difficult to penalize models for inventing broader market conditions, such as the cost of comparable items</li>
+</ul>
+
+<h2>Future improvements</h2>
+<ul>
+  <li><b>Environment swapping:</b> Test how much the social setting prompt dictates the behavior by swapping them between the low-value and high-value items</li>
+  <li><b>Human opponents:</b> Introduce human players or human-modeled bots replicating extreme negotiation ‘tactics’ like relentless lowballing and threatening to bail on the second round</li>
+  <li><b>Testing with AI assistants:</b> Agentic assistants such as Muse and Instinct could also be tested, since these models are capturing a large share of shopping, negotiations, etc. (often without the knowledge/input of the user)</li>
+</ul>
+
+<div class="downloads">
+  <p><a href="files/hagglebench-report.pdf" download>Full report (PDF)</a>: setup, scoring, per-model and per-tier results, and notable scenarios.</p>
+  <p><a href="files/hagglebench-data.zip" download>Data and scripts (ZIP)</a>: all 256 game transcripts, the judge's claim labels, a per-game summary, and the scripts used to check the numbers.</p>
+</div>
+<!-- ==== PIECE BODY END ==== -->
+  </main>
+
+  <footer class="site-footer">&copy; 2026 Mia Chin</footer>
+</div>
+</body>
+</html>
