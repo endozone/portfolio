@@ -3,21 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Decomposition Fallacy — mia chin</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
-<link href="assets/style.css" rel="stylesheet">
+<title>The Decomposition Fallacy — Mia Chin</title>
+<link rel="preload" href="assets/fonts/cmu-serif-500-roman.woff2" as="font" type="font/woff2" crossorigin>
+<link href="assets/latex.css" rel="stylesheet">
+<style>
+  /* Subtitle under the title (move into latex.css if other pages use one) */
+  .article .article-dek { margin: 0 0 0.6rem; font-size: 1.15rem; line-height: 1.4; text-align: left; hyphens: none; }
+</style>
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar"></aside>
-    <main class="main">
-      <div class="content">
-        <div class="eyebrow">Essay · September 2026</div>
-        <h1>The Decomposition Fallacy</h1>
-        <p class="dek">Software labor, agentic coding, and the future of work</p>
-        <div class="meta">11 min read</div>
+<div class="page">
+  <header class="site-header">
+    <h1 class="site-title"><a href="index.html">Mia Chin</a></h1>
+    <p class="site-description">Selected writings on finance and tech.</p>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="mailto:mchin3170@gmail.com">Email</a>
+    </nav>
+  </header>
+
+  <main class="article">
+    <h1>The Decomposition Fallacy</h1>
+    <p class="article-dek">Software labor, agentic coding, and the future of work</p>
+    <p class="article-meta">September 2026</p>
 <!-- ==== PIECE BODY START ==== -->
 <p>On Monday, <a href="https://cognition.com/blog/series-e">Cognition closed a $2 billion Series E at a $48 billion valuation</a>. The company’s pitch is that its coding agent, Devin, lets engineers “operate more like architects and delegate execution to swarms of agents”. This represents another change in software engineering as a profession - one that famously started out as clerical, mechanical work before shifting towards the ‘forward deployed’ model we see today.</p>
 
@@ -85,10 +93,9 @@
 
 <p>The decompositional approach was to assume that automating a task removes that task and nothing else. We know now that the remaining work gains value, and the people doing it become harder to replace. The mistake that needs to be avoided is assuming that those people will keep appearing on their own. Nobody is born an architect, after all.</p>
 <!-- ==== PIECE BODY END ==== -->
-      </div>
-    </main>
-  </div>
-  <script src="assets/pieces.js"></script>
-  <script src="assets/site.js"></script>
+  </main>
+
+  <footer class="site-footer">&copy; 2026 Mia Chin</footer>
+</div>
 </body>
 </html>
